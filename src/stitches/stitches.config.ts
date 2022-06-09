@@ -11,7 +11,7 @@ import {
 } from '@radix-ui/colors'
 import { utils } from './utils'
 
-const { createTheme } = createStitches({
+export const { createTheme, styled, getCssText } = createStitches({
 	utils: utils,
 	theme: {
 		colors: {

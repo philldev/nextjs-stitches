@@ -1,9 +1,9 @@
 import type * as Stitches from '@stitches/react'
-import { ConfigType } from '@stitches/react/types/config'
 
 type SpaceValue = Stitches.ScaleValue<'space'>
+type ColorValue = Stitches.ScaleValue<'colors'>
 
-const margins: ConfigType.Utils = {
+const margins = {
 	m: (v: SpaceValue) => ({ margin: v }),
 	mt: (v: SpaceValue) => ({ marginTop: v }),
 	mr: (v: SpaceValue) => ({ marginRight: v }),
@@ -13,7 +13,7 @@ const margins: ConfigType.Utils = {
 	my: (v: SpaceValue) => ({ marginTop: v, marginBottom: v }),
 }
 
-const paddings: ConfigType.Utils = {
+const paddings = {
 	p: (v: SpaceValue) => ({ padding: v }),
 	pt: (v: SpaceValue) => ({ paddingTop: v }),
 	pr: (v: SpaceValue) => ({ paddingRight: v }),
@@ -23,13 +23,13 @@ const paddings: ConfigType.Utils = {
 	py: (v: SpaceValue) => ({ paddingTop: v, paddingBottom: v }),
 }
 
-export const utils: ConfigType.Utils = {
+export const utils = {
 	size: (v: SpaceValue) => ({
 		width: v,
 		height: v,
 	}),
 	br: (v: SpaceValue) => ({ borderRadius: v }),
-	bg: (v: string) => ({ backgroundColor: v }),
+	bg: (v: ColorValue) => ({ backgroundColor: v }),
 	bgImg: (v: string) => ({ backgroundImage: `url(${v})` }),
 	...margins,
 	...paddings,

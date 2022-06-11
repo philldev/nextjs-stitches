@@ -1,14 +1,8 @@
 import type { NextPage } from 'next'
-import { Box } from 'src/components/box'
+import { Box } from 'src/lib/ui'
 
 const Home: NextPage = () => {
-	return (
-		<Box
-			css={{
-				bg: '$gray1',
-			}}
-		></Box>
-	)
+	return <Box></Box>
 }
 
 export default Home

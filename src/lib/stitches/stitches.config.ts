@@ -11,7 +11,7 @@ import {
 } from '@radix-ui/colors'
 import { utils } from './utils'
 
-export const { createTheme, styled, getCssText } = createStitches({
+export const { createTheme, styled, getCssText, globalCss } = createStitches({
 	utils: utils,
 	theme: {
 		colors: {
@@ -169,5 +169,13 @@ export const darkTheme = createTheme({
 		...blueDark,
 		...redDark,
 		...greenDark,
+	},
+})
+
+export const globals = globalCss({
+	html: {
+		fontSize: '$base',
+		fontFamily: '$body',
+		bg: '$gray1',
 	},
 })
